@@ -1,28 +1,41 @@
-# MLPforMNIST_classification
-# 🧠 MLP from Scratch - MNIST Classification
+# 🧠 MLPforMNIST_classification
 
-Đây là một chương trình huấn luyện **Multilayer Perceptron (MLP)** để phân loại chữ số viết tay từ tập dữ liệu **MNIST**, được cài đặt hoàn toàn bằng **NumPy** (không sử dụng các thư viện deep learning như PyTorch/TensorFlow).
+Một dự án huấn luyện mô hình **Multilayer Perceptron (MLP)** để phân loại chữ số viết tay từ tập dữ liệu **MNIST**.
 
----
-
-## 🧪 Mục tiêu
-
-- Hiểu cách hoạt động của **MLP** và **thuật toán Backpropagation**
-- Cài đặt thủ công:
-  - Hàm kích hoạt ReLU, Softmax
-  - Loss function CrossEntropy
-  - Gradient descent cập nhật trọng số
-- Huấn luyện model phân loại ảnh MNIST (28x28 → 784 chiều)
-- So sánh kết quả giữa model tự viết và PyTorch
+Dự án bao gồm:
+- Cài đặt MLP từ đầu bằng **NumPy** (không dùng thư viện deep learning)
+- Cài đặt MLP bằng **PyTorch** để so sánh
+- Triển khai ứng dụng web bằng **Streamlit** cho phép người dùng vẽ chữ số và nhận kết quả dự đoán từ mô hình đã huấn luyện.
 
 ---
 
-## 📦 Phụ thuộc
+## 🎯 Mục tiêu
 
-- Python ≥ 3.6
-- NumPy
-- Matplotlib
-- torchvision (để tải MNIST)
+- Hiểu và cài đặt:
+  - Hàm kích hoạt: **ReLU**, **Softmax**
+  - Hàm mất mát: **CrossEntropy**
+  - Thuật toán: **Backpropagation**, **Gradient Descent**
+- Huấn luyện model MLP từ ảnh đầu vào 28×28 (784 chiều)
+- So sánh hiệu quả mô hình viết tay và PyTorch
+- Triển khai dự đoán trực tuyến bằng Streamlit
+
+---
+
+## 📁 Cấu trúc dự án
 
 ```bash
-pip install numpy matplotlib torchvision
+MLPforMNIST_classification/
+├── mlp_numpy.py               # MLP viết tay bằng NumPy
+├── train_numpy.py             # Huấn luyện mô hình NumPy
+├── mlp_pytorch.py             # Định nghĩa MLP bằng PyTorch
+├── train_pytorch.py           # Huấn luyện và lưu PyTorch model
+├── mlp_mnist.pt               # Trọng số PyTorch đã huấn luyện
+├── streamlit_app.py           # Ứng dụng Streamlit vẽ và dự đoán số
+├── README.md
+
+
+-Yêu cầu Python ≥ 3.6
+- Cài đặt các thư viện cần thiết:
+pip install numpy matplotlib torchvision torch streamlit streamlit-drawable-canvas Pillow
+
+
